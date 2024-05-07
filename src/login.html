@@ -6,12 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
     <link rel="stylesheet" href="css/main.scss">
+    <script src="js/user.js" type="module"></script>
 </head>
 
 <body>
 <h1>Logga in</h1>
+<form id="loginForm">
+    <label for="username"><strong>Användarnamn:</strong></label>
+    <br>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+    <label for="password"><strong>Lösenord:</strong></label>
+    <br>
+    <input type="text" id="password" name="password" required>
+    <br><br>
+    <button id="submit" type="submit">Logga in</button>
+    <button id="reset" type="reset">Rensa formulär</button>
+</form>
 
 <h1>Registrera nytt konto</h1>
+<form id="registerForm">
+    <label for="newUsername"><strong>Användarnamn:</strong></label>
+    <br>
+    <input type="text" id="newUsername" name="newUsername" required>
+    <br><br>
+    <label for="newPassword"><strong>Lösenord:</strong></label>
+    <br>
+    <input type="text" id="newPassword" name="newPassword" required>
+    <br><br>
+    <button id="submit" type="submit">Skapa ny användare</button>
+    <button id="reset" type="reset">Rensa formulär</button>
+</form>
 
 </body>
 
