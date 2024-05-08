@@ -111,6 +111,6 @@ async function login(username, password) {
         localStorage.setItem("token", token);
         window.location.href = "index.html";
     } else {
-        console.log("Fel e-postadress eller lösenord");
+        console.log("Fel användarnamn eller lösenord");
     }
 }
