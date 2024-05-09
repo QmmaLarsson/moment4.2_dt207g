@@ -72,3 +72,15 @@ button#logout.submit {
     margin-right: auto;
     display: block;
 }
+
+@media screen and (max-width: 900px) {
+    .jobElement {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    form {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
