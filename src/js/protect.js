@@ -51,3 +51,19 @@ function displayJobs(jobs) {
         jobContainer.appendChild(jobElement);
     });
 }
+
+//Logga ut
+//Variabel
+const logoutEl = document.getElementById("logout");
+
+//Händelsehanterare
+logoutEl.addEventListener("click", handleLogout);
+
+//Funktion för att logga ut
+function handleLogout() {
+    //Ta bort token från localStorage
+    localStorage.removeItem("token");
+
+    //Omdirigera till inloggningssidan
+    window.location.href = "login.html";
+}

@@ -14,6 +14,9 @@ body {
     line-height: 1.5;
     margin: 0;
     min-height: 100vh;
+    background: linear-gradient(0deg, base.$primary-bg1, base.$primary-bg2);
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -26,4 +29,46 @@ h2 {
     /*Textstorlek 24 som standard*/
     @include component.heading-size(2);
     @extend .h;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-style: double;
+    border-color: base.$darkblue;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        border-style: solid;
+        border-color: base.$darkblue;
+        border-width: 2px;
+    }
+}
+
+.submit,
+.reset {
+    @extend .button;
+}
+
+.jobElement {
+    background-color: white;
+    padding: 20px;
+    border-style: double;
+    border-color: base.$darkblue;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}
+
+button#logout.submit {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
