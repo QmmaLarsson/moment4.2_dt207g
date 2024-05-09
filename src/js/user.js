@@ -52,6 +52,11 @@ async function addUser(newUsername, newPassword) {
         body: JSON.stringify(user)
     });
 
+    if (response.status === 400) {
+        alert("Användarnamnet är upptaget");
+        return;
+    }
+
     const data = await response.json();
     console.log(data);
 }
@@ -77,6 +82,17 @@ async function handleLogin(event) {
         alert("Vänligen fyll i alla fält")
         return;
     }
+
+        // Validera input
+        if (usernameEl.trim().length < 4) {
+            alert("Användarnamnet måste vara minst fyra tecken långt");
+            return;
+        }
+    
+        if (passwordEl.trim().length < 6) {
+            alert("Lösenordet måste vara minst sex tecken långt");
+            return;
+        }
 
     await login(usernameEl, passwordEl);
 
@@ -111,6 +127,6 @@ async function login(username, password) {
         localStorage.setItem("token", token);
         window.location.href = "index.html";
     } else {
-        console.log("Fel användarnamn eller lösenord");
+        alert("Fel användarnamn eller lösenord");
     }
 }
